@@ -3,6 +3,7 @@ Routes and views for the flask application.
 """
 
 from datetime import datetime
+
 from flask import render_template
 from python_webapp_flask import app
 
@@ -24,9 +25,8 @@ def contact():
     return render_template(
         'contact.html',
         title='Contact',
-        # year=datetime.now().year,
         year=datetime.now().year,
-        message='Your contact page.'
+        message='Questions? Comments?'
     )
 
 
@@ -37,7 +37,7 @@ def about():
         'about.html',
         title='About',
         year=datetime.now().year,
-        message='Your application description page.'
+        message='Openroom flask is a room booking system.'
     )
 
 
