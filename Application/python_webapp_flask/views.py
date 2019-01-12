@@ -42,5 +42,6 @@ def about():
 
 
 @app.context_processor
-def global_organization_name():
-    return str("Wyoming")
+def inject_global_organization_name():
+    return dict(global_organization_name="Wyoming, Inc.")
+
