@@ -11,6 +11,10 @@ body {
     src: url('../fonts/segoeuil.ttf');
 }
 
+img {
+    max-width: 100%;
+}
+
 .main-container {
     height: 400px;
     width: 100%;
