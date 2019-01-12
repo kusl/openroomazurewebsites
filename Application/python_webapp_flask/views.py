@@ -39,3 +39,8 @@ def about():
         year=datetime.now().year,
         message='Your application description page.'
     )
+
+
+@app.context_processor
+def global_organization_name():
+    return str("Wyoming")
