@@ -25,7 +25,7 @@ class FunctionalTests(unittest.TestCase):
             webAppUrl = pytest.config.getoption('webAppUrl')
             response = self.driver.get(webAppUrl)
             title = self.driver.title
-            self.assertIn("Home Page - Python Flask Application", title)
+            self.assertIn("Home Page - Wyoming, Inc.", title)
         except AssertionError:
             try:
                 # Default title assertion. Remove when deployment issue is fixed
