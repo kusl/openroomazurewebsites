@@ -2,8 +2,7 @@
 Routes and views for the flask application.
 """
 
-from datetime import datetime
-
+import pendulum
 from flask import render_template
 from python_webapp_flask import app
 
@@ -15,7 +14,7 @@ def home():
     return render_template(
         'index.html',
         title='Home Page',
-        year=datetime.now().year,
+        year=pendulum.now("UTC").year,
     )
 
 
@@ -25,7 +24,7 @@ def contact():
     return render_template(
         'contact.html',
         title='Contact',
-        year=datetime.now().year,
+        year=pendulum.now("UTC").year,
         message='Questions? Comments?'
     )
 
@@ -36,7 +35,7 @@ def about():
     return render_template(
         'about.html',
         title='About',
-        year=datetime.now().year,
+        year=pendulum.now("UTC").year,
         message='Openroom flask is a room booking system.'
     )
 
