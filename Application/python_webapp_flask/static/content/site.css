@@ -29,8 +29,6 @@ img {
 }
 
 .cloud-image {
-    width: 350px;
-    height: 150px;
     padding-bottom: 20px;
     margin: auto;
 }
@@ -78,6 +76,7 @@ img {
 
 .content-body {
     min-width: 400px;
+
 }
 
 .col-md-4 {
