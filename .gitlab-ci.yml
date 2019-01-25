@@ -1,0 +1,17 @@
+test:openroomtests:
+  image: python:stretch
+  services:
+    - postgres
+
+  variables:
+    # Configure postgres service (https://hub.docker.com/_/postgres/)
+    POSTGRES_DB: rawlins
+    POSTGRES_USER: rawlins
+    POSTGRES_PASSWORD: rawlins
+    image: postgres
+  script:
+    - cd Application
+    - pwd
+    - ls -a 
+    - pip install --upgrade pip setuptools
+    - pip install -r requirements.txt
