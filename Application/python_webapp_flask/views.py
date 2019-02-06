@@ -5,7 +5,7 @@ Routes and views for the flask application.
 import pendulum
 from flask import render_template
 
-from python_webapp_flask.app import app
+from python_webapp_flask import app
 
 
 @app.route('/')
