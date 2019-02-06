@@ -4,7 +4,8 @@ Routes and views for the flask application.
 
 import pendulum
 from flask import render_template
-from python_webapp_flask import app
+
+from python_webapp_flask.app import app
 
 
 @app.route('/')
@@ -43,4 +44,3 @@ def about():
 @app.context_processor
 def inject_global_organization_name():
     return dict(global_organization_name="Wyoming, Inc.")
-
