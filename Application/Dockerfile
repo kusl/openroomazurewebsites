@@ -7,4 +7,4 @@ WORKDIR /app
 RUN pip3 install -r requirements.txt
 ENTRYPOINT ["python3"]
 EXPOSE 5000
-CMD ["runserver.py"]
+ENTRYPOINT ["gunicorn","-w 2", "-b 0.0.0.0:5000", "app:app"]
