@@ -1,9 +1,11 @@
+import uuid
+
 import attr
 
 
 @attr.s(auto_attribs=True)
 class Room(object):
-    id: str
+    id: uuid.uuid4()
     name: str
     position: int
     description: str

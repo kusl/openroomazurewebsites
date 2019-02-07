@@ -1,20 +1,23 @@
 """
 Routes and views for the flask application.
 """
+import uuid
 
 import pendulum
 from flask import render_template
 
 from python_webapp_flask import app
+from python_webapp_flask.model.room import Room
 
 
 @app.route('/')
 @app.route('/home')
 def home():
     """Renders the home page."""
+    room = Room(id=uuid.uuid4(), name="Nayeon Room", position=1, description="Nayeon is a member of the group Twice")
     return render_template(
         'index.html',
-        title='Home Page',
+        title=f"Home Page {room.name}",
         year=pendulum.now("UTC").year,
     )
 
