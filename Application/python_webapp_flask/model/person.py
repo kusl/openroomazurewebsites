@@ -1,3 +1,4 @@
+import uuid
 from enum import Enum, auto
 
 import attr
@@ -11,7 +12,7 @@ class LoginType(Enum):
 
 @attr.s(auto_attribs=True)
 class Person(object):
-    id: str
+    id: uuid.uuid4
     name: str
     email: str
     password: str
@@ -19,3 +20,4 @@ class Person(object):
 
     def __attrs_post_init__(self):
         self.password = bcrypt.hashpw(self.password.encode('utf-8'), bcrypt.gensalt())
+        self.id = uuid.uuid4()
