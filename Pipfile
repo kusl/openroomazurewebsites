@@ -13,6 +13,7 @@ gunicorn = "*"
 blueprints = "*"
 attrs = "*"
 pytest = "*"
+person = "*"
 
 [requires]
 python_version = "3.7"
