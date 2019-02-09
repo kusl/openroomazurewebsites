@@ -18,3 +18,9 @@ def create_person():
 def test_person_name():
     katy_perry = create_person()
     assert katy_perry.name == "Katy Perry"
+
+
+def test_person_password():
+    katy_perry = create_person()
+    print(katy_perry.password)
+    assert len(katy_perry.password) > 0

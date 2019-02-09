@@ -2,6 +2,7 @@ import uuid
 from enum import Enum, auto
 
 import attr
+import bcrypt
 
 
 class LoginType(Enum):
@@ -16,3 +17,6 @@ class Person(object):
     email: str
     password: str
     login_type: LoginType
+
+    def __attrs_post_init__(self):
+        self.password = bcrypt.hashpw(self.password, bcrypt.gensalt())
