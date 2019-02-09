@@ -1,6 +1,8 @@
 import hashlib
 import uuid
 
+import bcrypt
+
 from python_webapp_flask.model.person import Person, LoginType
 
 
@@ -24,3 +26,6 @@ def test_person_password():
     katy_perry = create_person()
     print(katy_perry.password)
     assert len(katy_perry.password) > 0
+    # b'$2b$12$6GrwOS8NojwVzN56kLA.K.M4S1fKa6WIxLfhMlkgbR4UYZfqTikdS'
+    # b'$2b$12$6GrwOS8NojwVzN56kLA.K.M4S1fKa6WIxLfhMlkgbR4UYZfqTikdS'
+    assert bcrypt.checkpw("hunter2".encode("utf-8"), katy_perry.password)
