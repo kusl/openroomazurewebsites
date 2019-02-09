@@ -15,4 +15,4 @@ class Person(object):
     name: str
     email: str
     password: str
-    login_type: LoginType.name
+    login_type: LoginType
