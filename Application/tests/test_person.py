@@ -7,7 +7,7 @@ from python_webapp_flask.model.person import Person, LoginType
 
 def create_person():
     person = Person(
-        id=uuid.uuid4(),
+        id=str(uuid.uuid4()),
         name="Katy Perry",
         email="katy@perry.love",
         password="hunter2",

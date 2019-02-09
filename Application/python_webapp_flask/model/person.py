@@ -1,4 +1,3 @@
-import uuid
 from enum import Enum, auto
 
 import attr
@@ -12,7 +11,7 @@ class LoginType(Enum):
 
 @attr.s(auto_attribs=True)
 class Person(object):
-    id: uuid.uuid4
+    id: str
     name: str
     email: str
     password: str
