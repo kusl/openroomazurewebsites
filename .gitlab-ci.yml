@@ -15,4 +15,4 @@ test:openroomtests:
     - ls -a 
     - pip install --upgrade pip setuptools
     - pip install -r requirements.txt
-    - pytest
+    - pytest --verbose -s
