@@ -1,4 +1,3 @@
-import hashlib
 import uuid
 
 import bcrypt
@@ -11,7 +10,7 @@ def create_person():
         id=uuid.uuid4(),
         name="Katy Perry",
         email="katy@perry.love",
-        password=hashlib.sha512("hunter2".encode('utf-8') + str(uuid.uuid4()).encode('utf-8')).hexdigest(),
+        password="hunter2",
         login_type=LoginType.PASSWORD
     )
     return person
