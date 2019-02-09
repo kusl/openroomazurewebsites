@@ -12,7 +12,7 @@ class LoginType(Enum):
 
 @attr.s(auto_attribs=True)
 class Person(object):
-    id: uuid.uuid4()
+    id: uuid.uuid4
     name: str
     email: str
     password: str
