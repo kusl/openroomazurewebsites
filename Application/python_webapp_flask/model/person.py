@@ -19,4 +19,4 @@ class Person(object):
     login_type: LoginType
 
     def __attrs_post_init__(self):
-        self.password = bcrypt.hashpw(self.password, bcrypt.gensalt())
+        self.password = bcrypt.hashpw(self.password.encode('utf-8'), bcrypt.gensalt())
